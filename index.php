@@ -15,15 +15,17 @@
 
     <div id="app">
         <section>
-            <div class="container">
+            <div class="container p-3">
+                <h1 class="fw-bold text-primary">TODO LIST</h1>
                 <div class="card">
-                    <div class="card-header">
+                    <div class="card-header bg-primary-subtle">
                         <div class="input-group">
-
+                            <input type="text" class="form-control border-secondary-subtle" placeholder="Inserisci tasks" aria-describedby="button-addon2" v-model="newTodo" @keyup.enter="addStoreTodo">
+                            <button class="btn btn-light border-secondary-subtle" type="button" id="button-addon2" @click="addStoreTodo">Aggiungi</button>
                         </div>
                     </div>
                     <ul class="list-group list-group-flush">
-                        <li class="list-group-item" v-for="(todo, index) in todos" :key="index">
+                        <li class="list-group-item" v-for="(todo, index) in todos" :key="index" :class="{done: todo.done}">
                             {{ todo.text }}
                         </li>
                     </ul>

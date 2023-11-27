@@ -1,14 +1,18 @@
-    [
-        {
-            "text": "Fare i compiti",
-            "done": false
-        },
-        {
-            "text": "Fare la spesa",
-            "done": true
-        },
-        {
-            "text": "Fare il bucato",
-            "done": false
-        }
-    ]
+[
+    {
+        "text": "PHP",
+        "done": false
+    },
+    {
+        "text": "JavaScript",
+        "done": false
+    },
+    {
+        "text": "HTML",
+        "done": true
+    },
+    {
+        "text": "CSS",
+        "done": true
+    }
+]
