@@ -6,6 +6,10 @@
     max-width: 650px;
 }
 
+.title {
+    -webkit-text-stroke: 2px dodgerblue;
+}
+
 .done {
     text-decoration: line-through;
 }

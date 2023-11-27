@@ -17,7 +17,7 @@
     <div id="app">
         <section>
             <div class="container p-3">
-                <h1 class="fw-bold text-center text-white">TODO LIST</h1>
+                <h1 class="title fw-bold text-center text-white">TODO LIST</h1>
                 <div class="card">
                     <div class="card-header bg-primary-subtle">
                         <div class="input-group">
