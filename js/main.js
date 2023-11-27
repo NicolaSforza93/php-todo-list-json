@@ -43,6 +43,17 @@ createApp({
                 this.todos = res.data.results;
             });
 
+        },
+        toggleTodo(index) {
+            const data = {
+                id: index
+            }
+
+            axios.post('toggle.php', data, {
+                headers: { 'Content-Type': 'multipart/form-data' }
+            }).then((res) => {
+                this.todos = res.data.results;
+            })
         }
     },
     created() {

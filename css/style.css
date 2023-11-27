@@ -1,3 +1,7 @@
+#app {
+    background: linear-gradient(#4185DC, white);
+}
+
 .container {
     max-width: 650px;
 }
@@ -6,7 +10,15 @@
     text-decoration: line-through;
 }
 
+.list-group-item {
+    cursor: pointer;
+}
+
 .remove i {
     color: red;
     cursor: pointer;
+}
+
+.check i {
+    color: limegreen;
 }

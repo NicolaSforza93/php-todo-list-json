@@ -17,7 +17,7 @@
     <div id="app">
         <section>
             <div class="container p-3">
-                <h1 class="fw-bold text-primary">TODO LIST</h1>
+                <h1 class="fw-bold text-center text-white">TODO LIST</h1>
                 <div class="card">
                     <div class="card-header bg-primary-subtle">
                         <div class="input-group">
@@ -26,10 +26,19 @@
                         </div>
                     </div>
                     <ul class="list-group list-group-flush">
-                        <li class="list-group-item d-flex justify-content-between" v-for="(todo, index) in todos" :key="index" :class="{done: todo.done}">
-                            {{ todo.text }}
+                        <li class="list-group-item d-flex justify-content-between" v-for="(todo, index) in todos" :key="index" :class="{done: todo.done}" @click="toggleTodo(index)">
+                            <div class="d-flex gap-3">
+                                <span class="check" v-if="todo.done === true">
+                                    <i class="fa-solid fa-check"></i>
+                                </span>
+                                <span v-else>
+                                    <i class="fa-solid fa-xmark"></i>
+                                </span>
+                                {{ todo.text }}
+
+                            </div>
                             <span class="remove" @click.stop="removeTodo(index)">
-                                <i class="fa-solid fa-circle-xmark"></i>
+                                <i class="fa-solid fa-circle-minus"></i>
                             </span>
                         </li>
                     </ul>
