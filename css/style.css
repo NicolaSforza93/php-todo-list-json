@@ -5,3 +5,8 @@
 .done {
     text-decoration: line-through;
 }
+
+.remove i {
+    color: red;
+    cursor: pointer;
+}

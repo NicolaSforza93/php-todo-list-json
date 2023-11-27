@@ -30,6 +30,19 @@ createApp({
                 this.todos = res.data.results;
                 this.newTodo = '';
             });
+        },
+        removeTodo(index) {
+            const data = {
+                id: index
+            }
+
+            axios.post('remove.php', data, {
+                headers: { 'Content-Type': 'multipart/form-data' }
+            }).then((res) => {
+                console.log(res.data.results);
+                this.todos = res.data.results;
+            });
+
         }
     },
     created() {
