@@ -25,14 +25,14 @@
                             <button class="btn btn-light border-secondary-subtle" type="button" id="button-addon2" @click="addStoreTodo">Aggiungi</button>
                         </div>
                     </div>
-                    <ul class="list-group list-group-flush">
+                    <ul class="list-group list-group-flush" v-if="todos.length > 0">
                         <li class="list-group-item d-flex justify-content-between" v-for="(todo, index) in todos" :key="index" :class="{done: todo.done}" @click="toggleTodo(index)">
                             <div class="d-flex gap-3">
                                 <span class="check" v-if="todo.done === true">
                                     <i class="fa-solid fa-check"></i>
                                 </span>
                                 <span v-else>
-                                    <i class="fa-solid fa-xmark"></i>
+                                    <i class="fa-solid fa-minus"></i>
                                 </span>
                                 {{ todo.text }}
 
@@ -42,6 +42,7 @@
                             </span>
                         </li>
                     </ul>
+                    <p v-else class="mb-0 px-3 py-2">Vuoto</p>
                 </div>
             </div>
         </section>

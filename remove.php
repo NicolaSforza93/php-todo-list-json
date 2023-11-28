@@ -12,7 +12,6 @@ $response = [
 ];
 
 array_splice($todos, $index, 1);
-// var_dump($output);
 // var_dump($todos);
 
 $response['results'] = $todos;
